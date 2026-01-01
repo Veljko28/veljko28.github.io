@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        background: 'var(--background)',
+                        foreground: 'var(--foreground)',
+                        card: 'var(--card)',
+                        'card-foreground': 'var(--card-foreground)',
+                        popover: 'var(--popover)',
+                        'popover-foreground': 'var(--popover-foreground)',
+                        primary: 'var(--primary)',
+                        'primary-foreground': 'var(--primary-foreground)',
+                        secondary: 'var(--secondary)',
+                        'secondary-foreground': 'var(--secondary-foreground)',
+                        muted: 'var(--muted)',
+                        'muted-foreground': 'var(--muted-foreground)',
+                        accent: 'var(--accent)',
+                        'accent-foreground': 'var(--accent-foreground)',
+                        destructive: 'var(--destructive)',
+                        'destructive-foreground': 'var(--destructive-foreground)',
+                        border: 'var(--border)',
+                        input: 'var(--input)',
+                        ring: 'var(--ring)',
+                    },
+                    borderRadius: {
+                        lg: 'var(--radius)',
+                        md: 'calc(var(--radius) - 2px)',
+                        sm: 'calc(var(--radius) - 4px)',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-background text-foreground antialiased">
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" class="fixed top-4 right-4 z-50 inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10 bg-background/80 backdrop-blur-sm border shadow-sm hover:shadow-md transition-shadow">
+        <i data-lucide="sun" class="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 absolute"></i>
+        <i data-lucide="moon" class="h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100 absolute"></i>
+        <span class="sr-only">Toggle theme</span>
+    </button>
+
+    <main class="min-h-screen bg-background">
+        <!-- Hero Section -->
+        <section class="py-20 md:py-32 px-4 overflow-hidden relative">
+            <div class="max-w-4xl mx-auto relative z-10">
+                <div class="flex flex-col items-center gap-8">
+                    
+                    <div class="text-center space-y-4">
+                        <div class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80">
+                            Available for work
+                        </div>
+                        <h1 class="text-4xl md:text-6xl font-bold tracking-tight">
+                            Hi, I'm <span class="text-primary">Veljko Milovanović</span>
+                        </h1>
+                        <h2 class="text-xl md:text-2xl text-muted-foreground font-medium">
+                            Full Stack Developer
+                        </h2>
+                        <div class="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed space-y-4">
+                            <p>
+                                I am a passionate and dedicated computer engineer with a strong interest in full-stack development and AI technologies.
+                            </p>
+                            <p>
+                                With a solid foundation in programming from my background with competitive programming and web development, I have successfully contributed to various projects, including a <a href="https://vectal.ai" target="_blank" class="font-medium text-primary hover:underline">startup that was acquired for $1.8M</a>.
+                            </p>
+                        </div>
+                        
+                        <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
+                            <!-- Social Links -->
+                            <a href="https://github.com/veljko28" target="_blank" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 w-10">
+                                <i data-lucide="github" class="h-5 w-5"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/vim7" target="_blank" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 w-10">
+                                <i data-lucide="linkedin" class="h-5 w-5"></i>
+                            </a>
+                            <a href="mailto:contact@veljko.tech" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 w-10">
+                                <i data-lucide="mail" class="h-5 w-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="py-16 px-4 bg-muted/30">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold tracking-tight mb-4">Skills & Technologies</h2>
+                    <p class="text-muted-foreground">Technologies I work with on a daily basis</p>
+                </div>
+                
+                <div class="grid gap-8 text-center">
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-semibold">Languages</h3>
+                        <div class="flex flex-wrap justify-center gap-2">
+                            <div class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 gap-1">
+                                <i data-lucide="code-2" class="h-3 w-3"></i> TypeScript
+                            </div>
+                            <div class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 gap-1">
+                                <i data-lucide="code-2" class="h-3 w-3"></i> JavaScript
+                            </div>
+                             <div class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 gap-1">
+                                <i data-lucide="code-2" class="h-3 w-3"></i> Python
+                            </div>
+                            <div class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 gap-1">
+                                <i data-lucide="code-2" class="h-3 w-3"></i> C++
+                            </div>
+                            <div class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 gap-1">
+                                <i data-lucide="code-2" class="h-3 w-3"></i> Rust
+                            </div>
+                            <div class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 gap-1">
+                                <i data-lucide="code-2" class="h-3 w-3"></i> Java
+                            </div>
+                            <div class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 gap-1">
+                                <i data-lucide="code-2" class="h-3 w-3"></i> C#
+                            </div>
+                            <div class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 gap-1">
+                                <i data-lucide="database" class="h-3 w-3"></i> SQL
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-semibold">Web Development</h3>
+                        <div class="flex flex-wrap justify-center gap-2">
+                            <div class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 gap-1">
+                                <i data-lucide="zap" class="h-3 w-3"></i> React
+                            </div>
+                            <div class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 gap-1">
+                                <i data-lucide="globe" class="h-3 w-3"></i> Next.js
+                            </div>
+                            <div class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 gap-1">
+                                <i data-lucide="palette" class="h-3 w-3"></i> Tailwind CSS
+                            </div>
+                            <div class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 gap-1">
+                                <i data-lucide="server" class="h-3 w-3"></i> FastAPI
+                            </div>
+                            <div class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 gap-1">
+                                <i data-lucide="server" class="h-3 w-3"></i> Node.js
+                            </div>
+                            <div class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 gap-1">
+                                <i data-lucide="server" class="h-3 w-3"></i> Remix
+                            </div>
+                             <div class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 gap-1">
+                                <i data-lucide="server" class="h-3 w-3"></i> Vite
+                            </div>
+                            <div class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 gap-1">
+                                <i data-lucide="server" class="h-3 w-3"></i> Bun
+                            </div>
+                        </div>
+                    </div>
+                    
+                     <div class="space-y-4">
+                        <h3 class="text-lg font-semibold">Infrastructure & DevOps</h3>
+                        <div class="flex flex-wrap justify-center gap-2">
+                            <div class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 gap-1">
+                                <i data-lucide="cloud" class="h-3 w-3"></i> AWS
+                            </div>
+                            <div class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 gap-1">
+                                <i data-lucide="container" class="h-3 w-3"></i> Docker
+                            </div>
+                            <div class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 gap-1">
+                                <i data-lucide="container" class="h-3 w-3"></i> Render
+                            </div>
+                            <div class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 gap-1">
+                                <i data-lucide="container" class="h-3 w-3"></i> DigitalOcean
+                            </div>
+                            <div class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 gap-1">
+                                <i data-lucide="cloud" class="h-3 w-3"></i> Vercel
+                            </div>
+                            <div class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 gap-1">
+                                <i data-lucide="database" class="h-3 w-3"></i> PostgreSQL
+                            </div>
+                            <div class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 gap-1">
+                                <i data-lucide="database" class="h-3 w-3"></i> Redis
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-semibold">ML Frameworks</h3>
+                        <div class="flex flex-wrap justify-center gap-2">
+                            <div class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 gap-1">
+                                <i data-lucide="brain" class="h-3 w-3"></i> PyTorch
+                            </div>
+                            <div class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 gap-1">
+                                <i data-lucide="brain" class="h-3 w-3"></i> TensorFlow
+                            </div>
+                            <div class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 gap-1">
+                                <i data-lucide="bot" class="h-3 w-3"></i> Hugging Face
+                            </div>
+                            <div class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 gap-1">
+                                <i data-lucide="link" class="h-3 w-3"></i> LangChain
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Grid -->
+        <section class="py-16 px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold tracking-tight mb-4">Featured Personal Projects</h2>
+                    <p class="text-muted-foreground">A selection of projects I've worked on. Click on any project to learn more.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Project 1 -->
+                    <div class="rounded-lg bg-card text-card-foreground shadow-sm group relative overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-1">
+                        <div class="absolute top-4 right-4 z-10">
+                            <div class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-primary-foreground shadow hover:bg-primary/80">Featured</div>
+                        </div>
+                        <div class="aspect-video w-full overflow-hidden bg-muted relative">
+                            <img src="images/tresguard.png" alt="Tresguard.com" class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="text-xl font-semibold leading-none tracking-tight">Tresguard.com</h3>
+                                <div class="flex gap-2">
+                                    <a href="https://tresguard.com" target="_blank" class="text-muted-foreground hover:text-primary transition-colors"><i data-lucide="external-link" class="h-4 w-4"></i></a>
+                                </div>
+                            </div>
+                            <p class="text-sm text-muted-foreground mb-4 line-clamp-2">Privacy guides to help users navigate the digital world safely and securely. Built a comprehensive platform with articles, tools, and resources.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80">Remix</span>
+                                <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80">TypeScript</span>
+                                <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80">Tailwind CSS</span>
+                            </div>
+                            <div class="flex items-center gap-4 text-xs text-muted-foreground">
+                                <span class="flex items-center gap-1 ml-auto text-green-500 bg-green-500/10 px-2 py-0.5 rounded-full">Live</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="rounded-lg bg-card text-card-foreground shadow-sm group relative overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-1">
+                        <div class="absolute top-4 right-4 z-10">
+                            <div class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-primary-foreground shadow hover:bg-primary/80">Featured</div>
+                        </div>
+                        <div class="aspect-video w-full overflow-hidden bg-muted relative">
+                            <img src="images/agents-rs.png" alt="Agents.rs" class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="text-xl font-semibold leading-none tracking-tight">Agents.rs</h3>
+                                <div class="flex gap-2">
+                                    <a href="https://agents.rs" target="_blank" class="text-muted-foreground hover:text-primary transition-colors"><i data-lucide="external-link" class="h-4 w-4"></i></a>
+                                </div>
+                            </div>
+                            <p class="text-sm text-muted-foreground mb-4 line-clamp-2">An open-source framework for building AI agents in Rust. Designed and developed a modular framework for creating AI agents.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80">Rust</span>
+                                <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80">OpenAI API</span>
+                            </div>
+                            <div class="flex items-center gap-4 text-xs text-muted-foreground">
+                                <span class="flex items-center gap-1 ml-auto text-green-500 bg-green-500/10 px-2 py-0.5 rounded-full">Open Source</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="rounded-lg bg-card text-card-foreground shadow-sm group relative overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-1">
+                        <div class="aspect-video w-full overflow-hidden bg-muted relative">
+                            <img src="images/competitive-programming.png" alt="Competitive Programming" class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="text-xl font-semibold leading-none tracking-tight">Competitive Programming</h3>
+                                <div class="flex gap-2">
+                                    <a href="https://github.com/Veljko28/cpp-data-algrtms/" target="_blank" class="text-muted-foreground hover:text-primary transition-colors"><i data-lucide="github" class="h-4 w-4"></i></a>
+                                </div>
+                            </div>
+                            <p class="text-sm text-muted-foreground mb-4 line-clamp-2">A collection of all my competitive programming and data structures & algorithms implementations in C++.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80">C++</span>
+                                <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80">Algorithms</span>
+                            </div>
+                            <div class="flex items-center gap-4 text-xs text-muted-foreground">
+                                <span class="flex items-center gap-1 ml-auto text-green-500 bg-green-500/10 px-2 py-0.5 rounded-full">Completed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-12 px-4 bg-muted/50">
+            <div class="max-w-4xl mx-auto">
+                <div class="shrink-0 bg-border h-[1px] w-full mb-8"></div>
+                
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="text-center md:text-left">
+                        <p class="text-muted-foreground text-sm">
+                            © 2026 Veljko Milovanović. All rights reserved.
+                        </p>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <a href="https://github.com/veljko28" target="_blank" class="text-muted-foreground hover:text-foreground transition-colors">
+                            <i data-lucide="github" class="h-5 w-5"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/vim7" target="_blank" class="text-muted-foreground hover:text-foreground transition-colors">
+                            <i data-lucide="linkedin" class="h-5 w-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
